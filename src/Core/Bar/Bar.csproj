@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\RecipeBook\RecipeBook.csproj" />
+  </ItemGroup>
+</Project>
