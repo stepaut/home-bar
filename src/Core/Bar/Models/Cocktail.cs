@@ -1,24 +1,19 @@
-﻿using Bar.Database;
-using Bar.Enums;
-using RecipeBook.Models;
+﻿using Bar.Enums;
+using System;
 
 namespace Bar.Models;
 
-public class Cocktail : IDbItem
+public class Cocktail : Thing
 {
     public Recipe Recipe { get; }
-    public bool IsPossible { get; }
-    public Rating Rating { get; }
+    public bool IsPossible { get; set; }
+    public Rating Rating { get; set; }
 
-    public string Id { get; }
 
-    public void FromJson(string json)
+    public Cocktail(Recipe recipe, bool isPossible, Rating rating, Guid id) : base(id)
     {
-        throw new System.NotImplementedException();
-    }
-
-    public string ToJson()
-    {
-        throw new System.NotImplementedException();
+        Recipe = recipe;
+        IsPossible = isPossible;
+        Rating = rating;
     }
 }
